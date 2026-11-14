@@ -1,0 +1,8 @@
+<Solution>
+  <Project Path="BillLedger.API/BillLedger.API.csproj" />
+  <Project Path="BillLedger.Application/BillLedger.Application.csproj" />
+  <Project Path="BillLedger.Domain/BillLedger.Domain.csproj" />
+  <Project Path="BillLedger.Infrastructure/BillLedger.Infrastructure.csproj" />
+  <Project Path="BillLedger.IntegrationTests/BillLedger.IntegrationTests.csproj" />
+  <Project Path="BillLedger.UnitTests/BillLedger.UnitTests.csproj" />
+</Solution>
