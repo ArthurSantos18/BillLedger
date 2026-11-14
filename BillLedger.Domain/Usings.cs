@@ -1,3 +1,7 @@
-﻿global using System.Text.RegularExpressions;
-
+﻿global using BillLedger.Domain.Enums;
+global using BillLedger.Domain.Events;
+global using BillLedger.Domain.Exceptions;
 global using BillLedger.Domain.Patterns;
+global using BillLedger.Domain.ValueObjects;
+
+global using System.Text.RegularExpressions;
