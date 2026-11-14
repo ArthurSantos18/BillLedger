@@ -9,7 +9,7 @@
 
   <ItemGroup>
     <PackageReference Include="coverlet.collector" Version="6.0.4" />
-    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.14.1" />
+    <PackageReference Include="Microsoft.Testing.Platform.MSBuild" Version="2.5.2" />
     <PackageReference Include="xunit.v3" Version="4.0.3" />
     <PackageReference Include="FluentAssertions" Version="7.0.0" />
   </ItemGroup>
