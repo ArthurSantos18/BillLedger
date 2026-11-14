@@ -1,1 +1,1 @@
-﻿
+﻿global using BillLedger.Domain.Patterns;
