@@ -8,7 +8,10 @@ public sealed record Currency
 
     public string Code { get; }
 
-    private Currency(string code) => Code = code;
+    private Currency(string code)
+    {
+        Code = code;
+    }
 
     public static Currency FromCode(string code) => code.ToUpperInvariant() switch
     {

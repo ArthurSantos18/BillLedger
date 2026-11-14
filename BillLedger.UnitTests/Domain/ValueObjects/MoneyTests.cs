@@ -1,4 +1,4 @@
-﻿namespace BillLedger.UnitTests.Domain.ValueObject;
+﻿namespace BillLedger.UnitTests.Domain.ValueObjects;
 
 public sealed class MoneyTests
 {

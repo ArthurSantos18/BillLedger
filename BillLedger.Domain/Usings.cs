@@ -1,1 +1,3 @@
-﻿global using BillLedger.Domain.Patterns;
+﻿global using System.Text.RegularExpressions;
+
+global using BillLedger.Domain.Patterns;
