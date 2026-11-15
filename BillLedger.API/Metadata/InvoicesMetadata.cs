@@ -6,6 +6,7 @@ public static class InvoicesMetadata
 {
     [ApiConventionNameMatch(ApiConventionNameMatchBehavior.Prefix)]
     [ProducesResponseType(typeof(Result<InvoiceResponse>), StatusCodes.Status201Created)]
+    [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status400BadRequest)]
     [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status404NotFound)]
     [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status429TooManyRequests)]
     [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status500InternalServerError)]

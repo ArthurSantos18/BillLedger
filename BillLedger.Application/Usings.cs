@@ -10,15 +10,18 @@ global using BillLedger.Application.Common.Interfaces.Services;
 global using BillLedger.Application.Billing.Errors;
 global using BillLedger.Application.Billing.Requests;
 global using BillLedger.Application.Billing.Responses;
+global using BillLedger.Application.Billing.Commands;
 
 global using BillLedger.Application.Customers.Errors;
 global using BillLedger.Application.Customers.Requests;
 global using BillLedger.Application.Customers.Responses;
 global using BillLedger.Application.Customers.Queries;
+global using BillLedger.Application.Customers.Commands;
+global using BillLedger.Application.Customers.Validators;
 
 global using BillLedger.Application.Notifications.Events;
 
-global using BillLedger.Application.Customers.Commands;
+global using FluentValidation;
 
 global using LiteBus.Commands.Abstractions;
 global using LiteBus.Events.Abstractions;

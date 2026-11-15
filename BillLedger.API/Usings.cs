@@ -19,6 +19,8 @@ global using BillLedger.Application.Billing.Responses;
 
 global using BillLedger.Application.Common.Patterns;
 
+global using FluentValidation;
+
 global using LiteBus.Commands.Abstractions;
 global using LiteBus.Queries.Abstractions;
 

@@ -1,6 +1,6 @@
 ﻿namespace BillLedger.Application.Extensions;
 
-public static class LiteBusExtension
+public static class MediatorExtension
 {
     public static IServiceCollection AddMediator(this IServiceCollection services)
     {

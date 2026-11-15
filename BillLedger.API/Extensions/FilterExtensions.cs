@@ -9,6 +9,7 @@ public static class FilterExtensions
         services.AddControllers(options =>
         {
             options.Filters.Add<ResultToProblemDetailsFilter>();
+            options.Filters.Add<ValidationFilter>();
         });
 
         return services;

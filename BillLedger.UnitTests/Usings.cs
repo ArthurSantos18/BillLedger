@@ -16,15 +16,19 @@ global using BillLedger.Application.Customers.Commands;
 global using BillLedger.Application.Customers.Errors;
 global using BillLedger.Application.Customers.Requests;
 global using BillLedger.Application.Customers.Queries;
+global using BillLedger.Application.Customers.Validators;
 
 global using BillLedger.Application.Billing.Commands;
 global using BillLedger.Application.Billing.Errors;
 global using BillLedger.Application.Billing.Requests;
 global using BillLedger.Application.Billing.Queries;
+global using BillLedger.Application.Billing.Validators;
 
 global using BillLedger.UnitTests.Common.Customizations;
 
 global using FluentAssertions;
+
+global using FluentValidation.TestHelper;
 
 global using Microsoft.Extensions.Logging;
 
