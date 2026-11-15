@@ -5,6 +5,12 @@ public sealed record Money
     public decimal Amount { get; }
     public Currency Currency { get; }
 
+    private Money()
+    {
+        Amount = 0m;
+        Currency = Currency.Brl;
+    }
+
     private Money(decimal amount, Currency currency)
     {
         Amount = decimal.Round(amount, 2, MidpointRounding.ToEven);

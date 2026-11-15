@@ -6,6 +6,13 @@ public sealed class Customer : Entity<Customer>
     public Email Email { get; private set; }
     public Cpf Cpf { get; private set; }
 
+    private Customer()
+    {
+        Name = string.Empty;
+        Email = Email.Create("placeholder@example.com");
+        Cpf = Cpf.Create("11144477735");
+    }
+
     private Customer(string name, Email email, Cpf cpf)
     {
         SetId(Guid.NewGuid());

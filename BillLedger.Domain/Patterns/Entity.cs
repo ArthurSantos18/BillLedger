@@ -1,6 +1,6 @@
 ﻿namespace BillLedger.Domain.Patterns;
 
-public abstract class Entity<TEntity> where TEntity : Entity<TEntity>
+public abstract class Entity<TEntity> : IAuditable where TEntity : Entity<TEntity>
 {
     public Guid Id { get; protected set; } = Guid.NewGuid();
     public bool IsActive { get; protected set; } = true;
@@ -41,18 +41,6 @@ public abstract class Entity<TEntity> where TEntity : Entity<TEntity>
         return (TEntity)this;
     }
 
-    public TEntity SetCreatedAt(DateTime createdAt)
-    {
-        CreatedAt = createdAt;
-        return (TEntity)this;
-    }
-
-    public TEntity SetUpdatedAt(DateTime? updatedAt)
-    {
-        UpdatedAt = updatedAt;
-        return (TEntity)this;
-    }
-
     public TEntity MarkAsDeleted()
     {
         IsDeleted = true;
@@ -71,5 +59,15 @@ public abstract class Entity<TEntity> where TEntity : Entity<TEntity>
     {
         UpdatedAt = DateTime.UtcNow;
         return (TEntity)this;
+    }
+
+    public void SetCreatedAt(DateTime date)
+    {
+        CreatedAt = date;
+    }
+
+    public void SetUpdatedAt(DateTime date)
+    {
+        UpdatedAt = date;
     }
 }

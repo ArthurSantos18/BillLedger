@@ -10,6 +10,12 @@ public sealed class Invoice : Entity<Invoice>
     public DateTime? PaidAt { get; private set; }
     public DateTime? CancelledAt { get; private set; }
 
+    private Invoice()
+    {
+        Number = string.Empty;
+        Total = Money.Zero(Currency.Brl);
+    }
+
     private Invoice(Guid customerId, string number, Money total, DateTime dueDate)
     {
         SetId(Guid.NewGuid());

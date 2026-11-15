@@ -1,4 +1,4 @@
-﻿namespace BillLedger.Domain.Patterns;
+﻿namespace BillLedger.Domain.Patterns.Interfaces;
 
 public interface IDomainEvent
 {
