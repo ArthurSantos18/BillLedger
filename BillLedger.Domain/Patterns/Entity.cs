@@ -1,6 +1,6 @@
 ﻿namespace BillLedger.Domain.Patterns;
 
-public abstract class Entity<TEntity> : IAuditable where TEntity : Entity<TEntity>
+public abstract class Entity<TEntity> : IAuditable, IHasDomainEvents where TEntity : Entity<TEntity>
 {
     public Guid Id { get; protected set; } = Guid.NewGuid();
     public bool IsActive { get; protected set; } = true;

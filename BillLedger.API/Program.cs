@@ -1,3 +1,5 @@
+using BillLedger.Application.Extensions;
+
 namespace BillLedger.API;
 
 public partial class Program
@@ -7,19 +9,33 @@ public partial class Program
         var builder = WebApplication.CreateBuilder(args);
         var configuration = builder.Configuration;
 
-        builder.Services.AddOpenApi();
+        builder.AddBillLedgerLogging();
+
+        builder.Services.AddBillLedgerOpenApi();
+        builder.Services.AddFilters();
+        builder.Services.AddMediator();
         builder.Services.AddInfrastructure(configuration);
+        builder.Services.AddBillLedgerRateLimiting();
+        builder.Services.AddExceptionHandling();
+        builder.Services.AddBillLedgerHealthChecks(configuration);
 
         var app = builder.Build();
 
+        app.UseBillLedgerForwardedHeaders();
+        app.UseCorrelationIdMiddleware();
+        app.UseExceptionHandler();
+
         if (app.Environment.IsDevelopment())
         {
-            app.MapOpenApi();
+            app.UseHttpsRedirection();
         }
 
-        app.UseHttpsRedirection();
+        app.UseBillLedgerOpenApi();
+        app.UseBillLedgerHealthChecks();
+        app.UseBillLedgerRateLimiting();
 
-        app.Run();
+        app.MapControllers();
+
+        app.RunWithLogging();
     }
 }
-

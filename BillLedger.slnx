@@ -1,4 +1,7 @@
 <Solution>
+  <Folder Name="/Solution Items/">
+    <File Path=".editorconfig" />
+  </Folder>
   <Project Path="BillLedger.API/BillLedger.API.csproj" />
   <Project Path="BillLedger.Application/BillLedger.Application.csproj" />
   <Project Path="BillLedger.Domain/BillLedger.Domain.csproj" />

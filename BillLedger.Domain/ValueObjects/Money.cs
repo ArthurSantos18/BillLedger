@@ -2,7 +2,10 @@
 
 public sealed record Money
 {
+    [Description("O valor monetário, arredondado para duas casas decimais.")]
     public decimal Amount { get; }
+
+    [Description("A moeda associada ao valor monetário.")]
     public Currency Currency { get; }
 
     private Money()

@@ -1,6 +1,6 @@
 ﻿namespace BillLedger.Domain.Patterns.Interfaces;
 
-public interface IDomainEvent
+public interface IDomainEvent : IEvent
 {
     DateTime OccurredAt { get; }
 }

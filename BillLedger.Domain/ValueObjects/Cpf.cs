@@ -2,6 +2,7 @@
 
 public sealed record Cpf
 {
+    [Description("O número do CPF, contendo apenas os 11 dígitos.")]
     public string Value { get; }
 
     private Cpf(string value)

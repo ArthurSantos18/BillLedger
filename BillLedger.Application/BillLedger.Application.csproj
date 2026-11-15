@@ -7,6 +7,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="LiteBus" Version="7.1.1" />
+    <PackageReference Include="LiteBus.Runtime.Extensions.Microsoft.DependencyInjection" Version="7.1.1" />
+    <PackageReference Include="Mapster" Version="10.0.14" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\BillLedger.Domain\BillLedger.Domain.csproj" />
   </ItemGroup>
 

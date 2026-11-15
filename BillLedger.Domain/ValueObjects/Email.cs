@@ -5,6 +5,7 @@ public sealed partial record Email
     [GeneratedRegex(@"^[^@\s]+@[^@\s]+\.[^@\s]+$", RegexOptions.IgnoreCase)]
     private static partial Regex Format();
 
+    [Description("O endereço de e-mail normalizado em letras minúsculas.")]
     public string Value { get; }
 
     private Email(string value)
