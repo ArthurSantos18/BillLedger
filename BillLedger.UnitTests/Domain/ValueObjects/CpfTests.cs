@@ -1,6 +1,6 @@
 ﻿namespace BillLedger.UnitTests.Domain.ValueObjects;
 
-public class CpfTests
+public sealed class CpfTests
 {
     private const string ValidRawCpf = "12345678909";
     private const string ValidFormattedCpf = "123.456.789-09";

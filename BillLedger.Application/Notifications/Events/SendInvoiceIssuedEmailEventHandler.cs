@@ -1,8 +1,8 @@
 ﻿namespace BillLedger.Application.Notifications.Events;
 
-public sealed class SendInvoiceIssuedEmailHandler(
+public sealed class SendInvoiceIssuedEmailEventHandler(
     IEmailService emailService,
-    ILogger<SendInvoiceIssuedEmailHandler> logger)
+    ILogger<SendInvoiceIssuedEmailEventHandler> logger)
     : IEventHandler<InvoiceIssuedDomainEvent>
 {
     public async Task HandleAsync(InvoiceIssuedDomainEvent domainEvent, CancellationToken cancellationToken)

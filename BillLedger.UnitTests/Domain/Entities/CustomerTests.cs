@@ -1,6 +1,6 @@
 ﻿namespace BillLedger.UnitTests.Domain.Entities;
 
-public class CustomerTests
+public sealed class CustomerTests
 {
     private readonly IFixture _fixture = new Fixture().Customize(new DomainCustomization());
 

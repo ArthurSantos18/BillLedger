@@ -1,6 +1,6 @@
 ﻿namespace BillLedger.UnitTests.Domain.ValueObjects;
 
-public class EmailTests
+public sealed class EmailTests
 {
     [Theory]
     [InlineData("user@example.com")]
