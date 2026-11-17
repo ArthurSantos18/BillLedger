@@ -37,7 +37,7 @@ Este projeto foi construído como portfólio focado em **Domain-Driven Design (D
 
 ## 📁 Estrutura do Projeto
 
-O projeto segue uma estrutura **flat** (sem pastas `src/` ou `tests/`), com separação clara por camadas e **Monolito Modular** na camada de Application.
+O projeto segue uma estrutura **flat** (sem pastas `src/` ou `tests/`), com separação clara por camadas e modulos na camada de Application.
 
 ```text
 BillLedger/
@@ -241,6 +241,10 @@ Abra o navegador e acesse:
 ```text
 https://localhost:<porta>/scalar
 ```
+
+## Serviço de E-mail (Mock)
+
+Para manter o foco no escopo do projeto (arquitetura, CQRS e Domain Events), o envio de e-mails não foi implementado com SMTP real. O `EmailService` registra os e-mails no console, provando que o desacoplamento via Eventos está funcionando. A interface `IEmailService` está pronta para receber uma implementação real (SendGrid/AWS SES) sem alterar o domínio.
 
 ## 📄 Licença
 
