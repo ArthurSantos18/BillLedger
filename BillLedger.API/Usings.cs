@@ -1,4 +1,5 @@
 ﻿global using BillLedger.API.Extensions;
+global using BillLedger.API.Filters;
 global using BillLedger.API.Metadata;
 global using BillLedger.API.Middleware;
 global using BillLedger.API.Transformers;
@@ -19,6 +20,8 @@ global using BillLedger.Application.Billing.Responses;
 
 global using BillLedger.Application.Common.Patterns;
 
+global using BillLedger.Infrastructure.Data;
+
 global using FluentValidation;
 
 global using LiteBus.Commands.Abstractions;
@@ -37,6 +40,8 @@ global using Microsoft.AspNetCore.OpenApi;
 global using Microsoft.AspNetCore.RateLimiting;
 
 global using Microsoft.Extensions.Diagnostics.HealthChecks;
+
+global using Microsoft.EntityFrameworkCore;
 
 global using Microsoft.OpenApi;
 

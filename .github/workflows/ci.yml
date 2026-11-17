@@ -40,7 +40,6 @@ jobs:
 
   integration-tests:
     name: Integration Tests
-    if: false   # remover quando integration tests existirem
     runs-on: ubuntu-latest
 
     steps:

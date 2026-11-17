@@ -1,6 +1,4 @@
-﻿using BillLedger.API.Filters;
-
-namespace BillLedger.API.Extensions;
+﻿namespace BillLedger.API.Extensions;
 
 public static class FilterExtensions
 {

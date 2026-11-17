@@ -14,12 +14,15 @@ public partial class Program
         builder.Services.AddBillLedgerOpenApi();
         builder.Services.AddFilters();
         builder.Services.AddMediator();
+        builder.Services.AddApplication();
         builder.Services.AddInfrastructure(configuration);
         builder.Services.AddBillLedgerRateLimiting();
         builder.Services.AddExceptionHandling();
         builder.Services.AddBillLedgerHealthChecks(configuration);
 
         var app = builder.Build();
+
+        await app.SeedDatabaseAsync();
 
         app.UseBillLedgerForwardedHeaders();
         app.UseCorrelationIdMiddleware();
