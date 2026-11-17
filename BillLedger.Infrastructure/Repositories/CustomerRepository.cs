@@ -46,7 +46,9 @@ public sealed class CustomerRepository(AppDbContext context) : BaseRepository<Cu
     {
         if (!string.IsNullOrWhiteSpace(email))
         {
-            return query.Where(c => EF.Functions.ILike(EF.Property<string>(c, "Email"), email));
+            var normalizedEmail = Email.Create(email);
+
+            return query.Where(c => c.Email == normalizedEmail);
         }
 
         return query;
@@ -56,7 +58,9 @@ public sealed class CustomerRepository(AppDbContext context) : BaseRepository<Cu
     {
         if (!string.IsNullOrWhiteSpace(cpf))
         {
-            return query.Where(c => EF.Property<string>(c, "Cpf") == cpf);
+            var normalizedCpf = Cpf.Create(cpf);
+
+            return query.Where(c => c.Cpf == normalizedCpf);
         }
 
         return query;
